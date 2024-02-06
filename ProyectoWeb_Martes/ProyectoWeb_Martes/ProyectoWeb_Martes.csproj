@@ -17,7 +17,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress />
+    <Use64BitIISExpress>false</Use64BitIISExpress>
     <IISExpressSSLPort>44304</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -121,11 +121,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\InicioController.cs" />
-    <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\UsuarioModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +152,7 @@
     <Content Include="Estilos\img\undraw_profile_2.svg" />
     <Content Include="Estilos\img\undraw_profile_3.svg" />
     <Content Include="Estilos\img\undraw_rocket.svg" />
+    <Content Include="Estilos\js\RegistroUsuarios.js" />
     <Content Include="Estilos\js\sb-admin-2.js" />
     <Content Include="Estilos\js\sb-admin-2.min.js" />
     <Content Include="Estilos\vendor\bootstrap\js\bootstrap.bundle.js" />
@@ -295,12 +295,13 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Inicio\IniciarSesion.cshtml" />
     <Content Include="Views\Inicio\RegistrarUsuario.cshtml" />
-    <Content Include="Views\Shared\_Layout - Externo.cshtml" />
+    <Content Include="Views\Shared\_LayoutExterno.cshtml" />
     <Content Include="Views\Inicio\PantallaPrincipal.cshtml" />
+    <Content Include="Views\Inicio\RecuperarAcceso.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Usuario\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
